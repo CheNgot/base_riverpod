@@ -1,0 +1,143 @@
+name: base_riverpod
+description: A new Flutter project.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations: # Add this line
+    sdk: flutter
+  # For structure
+  easy_localization: ^3.0.0
+  freezed: ^0.14.1+1
+  freezed_annotation: ^0.14.1
+  json_serializable: ^4.0.0
+  enum_to_string: ^2.0.1
+  equatable: ^2.0.0
+  #  image_picker: ^0.6.7
+  intl: ^0.17.0
+  wechat_assets_picker: ^6.1.2  # For multi image picker
+  image_gallery_saver: ^1.7.1 # For download image/video
+
+  # Network
+  dio: ^4.0.0
+  #  ua_client_hints: ^1.0.3      # For User-Agent Client Hints
+  # Hook Provider
+  hooks_riverpod: ^0.13.1+1
+  flutter_hooks: ^0.16.0
+  # SharePref, database
+  hive: ^2.0.4
+  hive_flutter: ^1.1.0
+  sqflite: ^2.0.0+3
+  shared_preferences: ^2.0.5
+  path_provider: ^2.0.1
+  permission_handler: ^8.0.0+2  # Handle permission
+  url_launcher: ^6.0.7 # Handle open phone/link url ...
+  share: ^2.0.4        # Share intent
+
+  firebase_messaging: ^10.0.0     #fcm
+  flutter_local_notifications: ^4.0.1    #push notification
+  firebase_core: ^1.2.0
+
+  # For UIs
+  get: ^4.0.0-nullsafety.2        # For Utilities
+  carousel_slider: ^3.0.0           #Banner
+  flutter_screenutil: ^5.0.0+2      # Multi screen size
+  flutter_native_splash: ^1.2.0   # Splash screen
+  auto_animated: ^3.0.0           # List view, Grid view with animation
+  delayed_display: ^2.0.0          # Display animation
+  cached_network_image: ^2.5.1
+  #  smart_select: ^4.3.2            # Show list pick item dialog
+#  smart_select:
+#    git: https://github.com/tuannvm2109/smartselect-13.10.2020-remake #Custom luôn hiển thị filter
+  flutter_rating_bar: ^4.0.0      # Rate view
+  rflutter_alert: ^1.1.0          # Show alert dialog
+  adaptive_dialog: ^0.10.0+5
+  flutter_html: ^2.1.5            # Read html
+  flutter_datetime_picker: ^1.5.0 # Date time picker
+  bubble_tab_indicator: ^0.1.6      #tab bar
+  shimmer: ^1.1.2
+  flutter_spinkit: ^5.0.0         # Loading circle,wave,...
+  fancy_shimmer_image: ^1.2.0     # Loading shimmer placeholder Image
+  transparent_image: ^2.0.0       # Transparent placeholder
+  file_picker: ^3.0.1    # Pick multi image
+  fluttertoast: ^8.1.1  # Show toast
+  flutter_inappwebview: ^5.3.2
+
+  flutter_countdown_timer: ^4.1.0 # count down for otp page
+  pin_code_fields: ^7.2.0 # Otp View
+  #  qr_code_scanner: ^0.5.1 #Scan QR code
+  #  flutter_barcode_scanner: ^2.0.0 #Scan Barcode
+  webview_flutter: ^2.0.10 #web view with iframe
+  weekday_selector: ^1.0.0 #select date of week
+  flutter_cupertino_datetime_picker: ^3.0.0
+  #  flutter_cupertino_date_picker: #select month + year
+  #    git: https://github.com/daveleenew/flutter-cupertino-date-picker.git
+  qr_flutter: ^4.0.0 #Render Qr code
+  percent_indicator: ^3.4.0   # Show progress advise
+  qr_code_scanner: ^0.6.1 # Scan qr code
+  geolocator: ^8.0.0 # get lat lng user
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^1.12.2
+  flutter_gen_runner: ^3.0.2
+  flutter_launcher_icons: ^0.9.2
+  hive_generator: ^1.1.1
+
+dependency_overrides:
+  flutter_plugin_android_lifecycle: ^2.0.0
+  plugin_platform_interface: ^2.0.0
+  google_maps_flutter_platform_interface: 2.1.5
+  firebase_messaging_platform_interface: 3.1.6
+
+  args: ^2.1.1
+  path_provider: ^2.0.1
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/translations/
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Roboto-Italic.ttf
+          style: italic
+        - asset: assets/fonts/Roboto-Bold.ttf
+          weight: 700
+
+# gen splash screen
+# flutter pub run flutter_native_splash:create
+flutter_native_splash:
+  background_image: "assets/images/background_splash.png"
+
+# gen app icon
+# flutter pub run flutter_launcher_icons:main
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/app_logo.png"
