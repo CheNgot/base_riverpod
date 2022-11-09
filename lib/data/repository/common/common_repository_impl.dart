@@ -3,6 +3,7 @@
 import 'package:base_riverpod/data/local/hive/hive_provider.dart';
 import 'package:base_riverpod/data/model/base/result.dart';
 import 'package:base_riverpod/data/model/common/common_country.dart';
+import 'package:base_riverpod/data/model/common/response_banner.dart';
 import 'package:base_riverpod/data/network/dio_provider.dart';
 
 import 'common_api.dart';
@@ -21,6 +22,13 @@ class CommonRepositoryImpl implements CommonRepository {
   Future<Result<List<CommonCountry>?>> loadCountries() =>
       Result.guardFuture(() async {
         final baseResponse = await _commonAPI.loadCountries();
+        return baseResponse.data;
+      });
+
+  @override
+  Future<Result<List<ResponseBanner>?>> loadBanners() =>
+      Result.guardFuture(() async {
+        final baseResponse = await _commonAPI.getBanners();
         return baseResponse.data;
       });
 
