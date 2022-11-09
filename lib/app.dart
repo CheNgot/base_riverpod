@@ -1,5 +1,6 @@
 import 'package:base_riverpod/ui/auth/login/login_page.dart';
 import 'package:base_riverpod/ui/auth/register/register_page.dart';
+import 'package:base_riverpod/ui/home/home_page.dart';
 import 'package:easy_localization/src/public_ext.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
@@ -88,7 +89,7 @@ class App extends HookWidget {
         // themeMode: ThemeMode.light,
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
-        home: LoginPage(),
+        home: HomePage(),
         // home: isLogged ? MasterPage() : LoginPage(),
         onGenerateRoute: (st) {
           switch (st.name) {

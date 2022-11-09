@@ -9,8 +9,7 @@ import 'package:base_riverpod/data/repository/notification/notification_reposito
 import 'package:base_riverpod/data/repository/notification/notification_repository_impl.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-final dioProvider =
-    Provider<DioProvider>((ref) => DioProvider(dio: AppDio.getInstance(), hiveProvider: ref.read(hiveProvider)));
+final dioProvider = Provider<DioProvider>((ref) => DioProvider(hiveProvider: ref.read(hiveProvider)));
 
 final hiveProvider = Provider<HiveProvider>((ref) => HiveProvider());
 
@@ -20,5 +19,5 @@ final commonRepositoryProvider = Provider<CommonRepository>(
 final authRepositoryProvider = Provider<AuthRepository>(
     (ref) => AuthRepositoryImpl(hiveProvider: ref.read(hiveProvider), dioProvider: ref.read(dioProvider)));
 
-final notificationRepositoryProvider = Provider<NotificationRepository>(
-    (ref) => NotificationRepositoryImpl(hiveProvider: ref.read(hiveProvider), dioProvider: ref.read(dioProvider)));
+// final notificationRepositoryProvider = Provider<NotificationRepository>(
+//     (ref) => NotificationRepositoryImpl(hiveProvider: ref.read(hiveProvider), dioProvider: ref.read(dioProvider)));

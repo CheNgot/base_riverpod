@@ -7,7 +7,7 @@ enum NoteType { TYPE_NORMAL, TYPE_IMPORTANT, TYPE_PASSWORD }
 
 @immutable
 class Constants {
-  static const String endpoint = "http://massage.hoanvusolutions.com.vn/";
+  static const String endpoint = "http://allbanks.hoanvusolutions.com.vn/api/v1/";
 
   static const String CHANNEL_ID = "flutter_message_client_channel_id";
   static const String CHANNEL_NAME = "Massage Client";
@@ -58,4 +58,6 @@ class Constants {
   static const String ratePage = '/RatePage';
   static const String notificationPage = '/NotificationPage';
   static const String notificationDetailPage = '/notificationDetailPage';
+
+  static String endpointRelease = "http://allbanks.hoanvusolutions.com.vn/api/v1/";
 }

@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:dio/adapter.dart';
 import 'package:dio/dio.dart';
+
 import 'package:flutter/foundation.dart';
 
 import '../../constants.dart';
@@ -17,7 +18,7 @@ class AppDio with DioMixin implements Dio {
     };
 
     options = BaseOptions(
-      baseUrl: Constants.endpoint,
+      baseUrl: kReleaseMode? Constants.endpointRelease: Constants.endpoint,
       contentType: 'application/json',
       headers: headers,
       connectTimeout: 50000,
@@ -40,10 +41,9 @@ class AppDio with DioMixin implements Dio {
     // Firebase Performance
     // interceptors.add(DioFirebasePerformanceInterceptor());
 
-    if (kDebugMode) {
       // Local Log
       interceptors.add(LogInterceptor(responseBody: true, requestBody: true));
-    }
+
 
     httpClientAdapter = DefaultHttpClientAdapter();
   }
