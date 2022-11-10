@@ -4,7 +4,6 @@ import 'package:base_riverpod/ui/order/tab_bar_order.dart';
 import 'package:flutter/material.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
-
 import 'order_view_model.dart';
 
 class OrderPage extends StatefulWidget {
@@ -15,7 +14,6 @@ class OrderPage extends StatefulWidget {
 }
 
 class _OrderPageState extends State<OrderPage> {
-
   String text = "Danh mục";
   final AssetGenImage iconData = Assets.images.icCategory;
   ScrollController? scrollController;
@@ -23,8 +21,7 @@ class _OrderPageState extends State<OrderPage> {
 
   /// Listener that reports the position of items when the list is scrolled.
   final ItemPositionsListener itemPositionsListener =
-  ItemPositionsListener.create();
-
+      ItemPositionsListener.create();
 
   @override
   void initState() {
@@ -41,20 +38,20 @@ class _OrderPageState extends State<OrderPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              TabBarOrder(text: text,
+              TabBarOrder(
+                text: text,
                 iconData: iconData,
               ),
               SizedBox(height: 10.w),
               Expanded(child: _buildMainView())
-
-
             ],
           ),
         ),
       ),
     );
   }
-  _buildMainView(){
+
+  _buildMainView() {
     return _buildListView();
   }
 
@@ -65,34 +62,34 @@ class _OrderPageState extends State<OrderPage> {
       child: GridView.count(
         padding: EdgeInsets.zero,
         crossAxisCount: 4,
-        children:  List<Widget>.generate(8, (index) {
-          return  GridTile(
-            child:  InkwellCustom(onTap: (){
-              itemScrollController.scrollTo(
-                  index: index+1,
-                  duration: Duration(seconds: 2),
-                  curve: Curves.easeInOutCubic);
-            },
-            child: Card(
-                color: Colors.blue.shade200,
-                child:  Center(
-                  child:  Text('title $index'),
-                )
-            ),),
+        children: List<Widget>.generate(8, (index) {
+          return GridTile(
+            child: InkwellCustom(
+              onTap: () {
+                itemScrollController.scrollTo(
+                    index: index + 1,
+                    duration: Duration(seconds: 2),
+                    curve: Curves.easeInOutCubic);
+              },
+              child: Card(
+                  color: Colors.blue.shade200,
+                  child: Center(
+                    child: Text('title $index'),
+                  )),
+            ),
           );
         }),
       ),
     );
-    }
+  }
 
   _buildListView() {
     return ScrollablePositionedList.builder(
       itemCount: 9,
       itemBuilder: (context, index) {
-        if(index==0){
+        if (index == 0) {
           return _buildCategory();
-        }
-        else{
+        } else {
           return _buildItem(index);
         }
       },
@@ -105,16 +102,15 @@ class _OrderPageState extends State<OrderPage> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("item tổng=="+indexTotal.toString()),
+        Text("item tổng==" + indexTotal.toString()),
         ListView.builder(
             primary: false,
             shrinkWrap: true,
             itemCount: 10,
-            itemBuilder: (BuildContext context,int index){
+            itemBuilder: (BuildContext context, int index) {
               return ItemOrder();
             })
       ],
     );
   }
-
 }

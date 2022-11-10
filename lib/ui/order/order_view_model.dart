@@ -16,9 +16,9 @@ import 'package:base_riverpod/resources/app_resource.dart';
 import 'package:base_riverpod/resources/base/base_loading_state.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-final orderViewModel = ChangeNotifierProvider.autoDispose(
-        (ref) => OrderViewModel(ref.read(orderRepositoryProvider), ref.read(hiveProvider), ref.read(broadCastProvider),
-        ref.read(commonRepositoryProvider)));
+final orderViewModel = ChangeNotifierProvider.autoDispose((ref) =>
+    OrderViewModel(ref.read(orderRepositoryProvider), ref.read(hiveProvider),
+        ref.read(broadCastProvider), ref.read(commonRepositoryProvider)));
 
 class OrderViewModel extends BaseLoadingChangeNotifier {
   final HiveProvider _hiveProvider;
@@ -26,16 +26,11 @@ class OrderViewModel extends BaseLoadingChangeNotifier {
   final CommonRepository _commonRepository;
   final OrderRepository _orderRepository;
 
-
-  OrderViewModel(this._orderRepository, this._hiveProvider, this._broadCastProvider,this._commonRepository);
-
-
-
+  OrderViewModel(this._orderRepository, this._hiveProvider,
+      this._broadCastProvider, this._commonRepository);
 
   List<CommonBanner>? listBanners;
 
-
- 
 // Future<ResponseLogin?> login(String username, String password) async {
 //   final request = RequestLogin(phone: username, password: password, app_type: "customer"
 //       // device_token: _hiveProvider.getDeviceToken(),
