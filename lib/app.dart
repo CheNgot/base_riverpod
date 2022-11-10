@@ -1,6 +1,7 @@
 import 'package:base_riverpod/ui/auth/login/login_page.dart';
 import 'package:base_riverpod/ui/auth/register/register_page.dart';
 import 'package:base_riverpod/ui/home/home_page.dart';
+import 'package:base_riverpod/ui/master/master_page.dart';
 import 'package:easy_localization/src/public_ext.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
@@ -89,7 +90,7 @@ class App extends HookWidget {
         // themeMode: ThemeMode.light,
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
-        home: HomePage(),
+        home: MasterPage(),
         // home: isLogged ? MasterPage() : LoginPage(),
         onGenerateRoute: (st) {
           switch (st.name) {
@@ -110,8 +111,8 @@ class App extends HookWidget {
             //   return BasePageRoute(settings: st, builder: (_) => ForgotPassChangePassPage(st.arguments as ForgotPassChangePassArg));
             // case Constants.changePassPage:
             //   return BasePageRoute(settings: st, builder: (_) => ChangePassPage());
-            // case Constants.masterPage:
-            //   return BasePageRoute(settings: st, builder: (_) => MasterPage());
+            case Constants.masterPage:
+              return BasePageRoute(settings: st, builder: (_) => MasterPage());
           }
         },
       ),

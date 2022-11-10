@@ -52,6 +52,14 @@ class Constants {
   static const String appointmentPage = '/AppointmentPage';
   static const String historyPage = '/HistoryPage';
   static const String profilePage = '/ProfilePage';
+  static const String orderPage = '/orderPage';
+  static const String storePage = '/storePage';
+  static const String promotionPage = '/promotionPage';
+  static const String otherPage = '/otherPage';
+
+
+
+
 
   static const String employeePage = '/EmployeePage';
   static const String scheduleServicePage = '/ScheduleServicePage';
