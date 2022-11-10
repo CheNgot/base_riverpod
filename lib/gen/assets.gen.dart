@@ -41,6 +41,8 @@ class $AssetsImagesGen {
       const AssetGenImage('assets/images/ic_camera.png');
   AssetGenImage get icCategories =>
       const AssetGenImage('assets/images/ic_categories.png');
+  AssetGenImage get icCategory =>
+      const AssetGenImage('assets/images/ic_category.png');
   AssetGenImage get icChitiet =>
       const AssetGenImage('assets/images/ic_chitiet.png');
   AssetGenImage get icClock =>

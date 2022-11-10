@@ -120,9 +120,9 @@ class _MasterPageState extends State<MasterPage> with TickerProviderStateMixin {
 
                 onPress: () {
                     _navigatorKey.currentState
-                        ?.pushNamedAndRemoveUntil(Constants.otherPage, (route) => route.isFirst,
+                        ?.pushNamedAndRemoveUntil(Constants.orderPage, (route) => route.isFirst,
                         arguments: false);
-                    viewModel.addPageToBackStack(Constants.otherPage);
+                    viewModel.addPageToBackStack(Constants.orderPage);
 
 
                 },
