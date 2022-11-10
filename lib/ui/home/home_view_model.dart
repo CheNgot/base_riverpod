@@ -4,12 +4,14 @@ import 'dart:io';
 
 import 'package:base_riverpod/data/broadcast/broadcast_provider.dart';
 import 'package:base_riverpod/data/local/hive/hive_provider.dart';
+import 'package:base_riverpod/data/model/base/base_request.dart';
 import 'package:base_riverpod/data/model/common/common_banner.dart';
 import 'package:base_riverpod/data/model/common/common_country.dart';
 import 'package:base_riverpod/data/model/common/response_banner.dart';
 import 'package:base_riverpod/data/provider/provider.dart';
 import 'package:base_riverpod/data/repository/auth/auth_repository.dart';
 import 'package:base_riverpod/data/repository/common/common_repository.dart';
+import 'package:base_riverpod/resources/app_resource.dart';
 import 'package:base_riverpod/resources/base/base_loading_state.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -71,6 +73,11 @@ class HomeViewModel extends BaseLoadingChangeNotifier {
     listBanners = temp;
 
     notifyListeners();
+  }
+
+  Future<List<Object>?> loadSpecialOffer(int page) async {
+    final request = BaseRequest(page: page, limit: Constants.pageLimit);
+    return handleResultAPI(_commonRepository.loadSpecialOffer(request));
   }
 
 

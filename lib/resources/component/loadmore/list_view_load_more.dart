@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:auto_animated/auto_animated.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -19,6 +21,8 @@ class ListViewLoadMore<T> extends StatefulWidget {
   final scrollDirection;
   double? height;
   double? width;
+  bool? primary;
+  ScrollController? controller;
 
   ListViewLoadMore(
       {Key? key,
@@ -28,7 +32,9 @@ class ListViewLoadMore<T> extends StatefulWidget {
       this.onClickItem,
       this.scrollDirection,
       this.height,
-      this.width})
+      this.width,
+      this.primary,
+      this.controller})
       : super(key: key);
 
   @override
@@ -43,6 +49,10 @@ class ListViewLoadMoreState<T> extends State<ListViewLoadMore<T>> {
   List<T>? listData;
   int? _deletedItemCount;
   int? _addedItemCount;
+
+
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -65,13 +75,15 @@ class ListViewLoadMoreState<T> extends State<ListViewLoadMore<T>> {
                 height: widget.height,
                 width: widget.width,
                 child: SingleChildScrollView(
+                  primary: false,
                   scrollDirection: widget.scrollDirection ?? Axis.vertical,
                   controller: controller,
-                  physics: AlwaysScrollableScrollPhysics(),
+                  physics: NeverScrollableScrollPhysics(),
                   child: LiveList.options(
                     padding: EdgeInsets.zero,
                     shrinkWrap: true,
                     physics: NeverScrollableScrollPhysics(),
+                    primary: false,
                     // key: widget.listLoadMoreKey,
                     // controller: controller,
                     scrollDirection: widget.scrollDirection ?? Axis.vertical,
@@ -124,7 +136,7 @@ class ListViewLoadMoreState<T> extends State<ListViewLoadMore<T>> {
   void _scrollListener() async {
     if (isLoadingMore == true) return;
     if ((controller?.position.extentAfter ?? 0) < 150) {
-      // log (controller.position.extentAfter.toString());
+      log (controller?.position.extentAfter.toString()??"");
       if ((listData?.length ?? 0) + (_deletedItemCount ?? 0) - (_addedItemCount ?? 0) >=
           ((currentPage ?? 1) - 1) * Constants.pageLimit) {
         isLoadingMore = true;

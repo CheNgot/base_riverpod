@@ -66,7 +66,7 @@ class GridViewLoadMoreState<T> extends State<GridViewLoadMore<T>> {
           : RefreshIndicator(
               child: SingleChildScrollView(
                 controller: controller,
-                physics: AlwaysScrollableScrollPhysics(),
+                physics: NeverScrollableScrollPhysics(),
                 child: LiveGrid.options(
                   padding: EdgeInsets.zero,
                   shrinkWrap: true,
