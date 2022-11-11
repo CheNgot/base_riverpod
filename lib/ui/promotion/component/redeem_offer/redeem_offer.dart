@@ -31,7 +31,32 @@ class _RedeemOfferState extends State<RedeemOffer> {
 
               ],
             ),
+            _buildListHighLight(),
+            SizedBox(height: 10.w),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(child: Text(LocaleKeys.txt_highlight.tr(),style: styleTextBlackBold(15))),
+                TextViewAll(onPress: (){
+                  print("view all hight light");
+                })
+
+              ],
+            ),
+            _buildListHighLight(),
+            SizedBox(height: 10.w),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(child: Text(LocaleKeys.txt_highlight.tr(),style: styleTextBlackBold(15))),
+                TextViewAll(onPress: (){
+                  print("view all hight light");
+                })
+
+              ],
+            ),
             _buildListHighLight()
+
           ],
         ),
       ),

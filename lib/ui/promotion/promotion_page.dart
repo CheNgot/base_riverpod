@@ -73,10 +73,10 @@ class _PromotionPageState extends State<PromotionPage> {
     return HookBuilder(builder: (_){
       final type = useProvider(promotionViewModel.select((value) => value.type));
       if(type==1){
-        return AccumulatePoints();
+        return Expanded(child: AccumulatePoints());
       }
       else{
-        return RedeemOffer();
+        return Expanded(child: RedeemOffer());
       }
     });
   }
