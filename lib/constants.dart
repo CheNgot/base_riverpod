@@ -68,4 +68,8 @@ class Constants {
   static const String notificationDetailPage = '/notificationDetailPage';
 
   static String endpointRelease = "http://allbanks.hoanvusolutions.com.vn/api/v1/";
+
+  static const String linkImageTest = 'https://www.pakainfo.com/wp-content/uploads/2021/09/image-url-for-testing.jpg';
+
+
 }

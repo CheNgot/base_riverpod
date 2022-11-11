@@ -548,7 +548,13 @@
   "txt_max_interest_rate": "Lãi suất tối đa 1 năm: 150% lãi suất cơ bản, VD: 150%x9%= 13,5%",
   "txt_example": "Ví dụ vay 1 tỷ trong 20 năm, lãi suất 10%/năm.\nMỗi tháng trả:\n1. Gốc: 1tỷ/20năm/12 tháng = 4,16 triệu\n2. Lãi: 10% x 1 tỷ/12 tháng = 8,33 tr\nTổng nợ phải trả: 12,49 tr.\nLãi sẽ giảm dần theo dư nợ gốc",
   "txt_please_enter_date": "Vui lòng nhập thời gian giải ngân dự kiến",
-  "txt_unblock": "Bỏ block"
+  "txt_unblock": "Bỏ block",
+  "txt_accumulate_points": "Tích điểm",
+  "txt_redeem_offer": "Đổi ưu đãi",
+  "txt_highlight": "Highlight"
+
+
+
 
 
 

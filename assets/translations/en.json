@@ -568,7 +568,10 @@
   "txt_max_interest_rate": "Maximum interest rate for 1 year: 150% of basic interest rate, for example: 150%x9%= 13.5%",
   "txt_example": "For example, borrow 1 billion in 20 years, interest rate 10%/year.\nPay per month:\n1. Original: 1 billion/20 years/12 months = 4.16 million VND\n2. Interest: 10% x 1 billion/12 months = 8.33 million VND\nTotal liabilities: 12.49 million.\nInterest will gradually decrease according to the principal balance",
   "txt_please_enter_date": "Please enter expected disbursement time",
-  "txt_unblock": "Unblock"
+  "txt_unblock": "Unblock",
+  "txt_accumulate_points": "Accumulate points",
+  "txt_redeem_offer": "Redeem offer",
+  "txt_highlight": "Highlight"
 
 
 

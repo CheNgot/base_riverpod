@@ -9,6 +9,8 @@ import 'package:base_riverpod/data/repository/notification/notification_reposito
 import 'package:base_riverpod/data/repository/notification/notification_repository_impl.dart';
 import 'package:base_riverpod/data/repository/order/order_repositiory_impl.dart';
 import 'package:base_riverpod/data/repository/order/order_repository.dart';
+import 'package:base_riverpod/data/repository/promotion/promotion_repository.dart';
+import 'package:base_riverpod/data/repository/promotion/promotion_repository_impl.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 final dioProvider = Provider<DioProvider>((ref) => DioProvider(hiveProvider: ref.read(hiveProvider)));
@@ -24,6 +26,10 @@ final authRepositoryProvider = Provider<AuthRepository>(
 
 final orderRepositoryProvider = Provider<OrderRepository>(
         (ref) => OrderRepositoryImpl(hiveProvider: ref.read(hiveProvider), dioProvider: ref.read(dioProvider)));
+
+
+final promotionRepositoryProvider = Provider<PromotionRepository>(
+        (ref) => PromotionRepositoryImpl(hiveProvider: ref.read(hiveProvider), dioProvider: ref.read(dioProvider)));
 
 
 // final notificationRepositoryProvider = Provider<NotificationRepository>(
