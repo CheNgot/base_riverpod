@@ -575,5 +575,6 @@ abstract class  LocaleKeys {
   static const txt_highlight = 'txt_highlight';
   static const txt_utilities = 'txt_utilities';
   static const txt_support = 'txt_support';
+  static const txt_order_history = 'txt_order_history';
 
 }

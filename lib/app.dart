@@ -2,6 +2,7 @@ import 'package:base_riverpod/ui/auth/login/login_page.dart';
 import 'package:base_riverpod/ui/auth/register/register_page.dart';
 import 'package:base_riverpod/ui/home/home_page.dart';
 import 'package:base_riverpod/ui/master/master_page.dart';
+import 'package:base_riverpod/ui/other/%20component/order_history%20/order_history_page.dart';
 import 'package:easy_localization/src/public_ext.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
@@ -101,6 +102,8 @@ class App extends HookWidget {
               return BasePageRoute(settings: st, builder: (_) => LoginPage());
             case Constants.registerPage:
               return BasePageRoute(settings: st, builder: (_) => RegisterPage());
+            case Constants.orderHistoryPage:
+              return BasePageRoute(settings: st, builder: (_) => OrderHistoryPage());
             // case Constants.registerPage:
             //   return BasePageRoute(settings: st, builder: (_) => RegisterPage());
             // case Constants.forgotPassEmailPage:

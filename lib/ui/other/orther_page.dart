@@ -54,7 +54,10 @@ class _OtherPageState extends State<OtherPage> {
         SizedBox(height: 10.w),
         Text(LocaleKeys.txt_utilities.tr(),style: styleTextBlackBold(18)),
         SizedBox(height: 10.w),
-        ViewCate(),
+        ViewCate(text: "Lịch sử đơn hàng",
+        onPress: (){
+          Navigator.of(context,rootNavigator: true).pushNamed(Constants.orderHistoryPage);
+        }),
         ViewCate()
       ],
     );
