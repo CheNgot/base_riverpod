@@ -82,7 +82,7 @@ class MasterPageViewModel extends ChangeNotifier {
         tab = MasterPageTab.tabPromotion;
         break;
       case Constants.otherPage:
-        tab = MasterPageTab.tabOrder;
+        tab = MasterPageTab.tabOther;
         break;
 
       default:

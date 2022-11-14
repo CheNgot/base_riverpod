@@ -573,5 +573,7 @@ abstract class  LocaleKeys {
   static const txt_accumulate_points = 'txt_accumulate_points';
   static const txt_redeem_offer = 'txt_redeem_offer';
   static const txt_highlight = 'txt_highlight';
+  static const txt_utilities = 'txt_utilities';
+  static const txt_support = 'txt_support';
 
 }

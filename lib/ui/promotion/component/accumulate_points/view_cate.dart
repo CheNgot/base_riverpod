@@ -8,13 +8,15 @@ class ViewCate extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(5.w),
+      padding: EdgeInsets.all(10.w),
       height: 80.w,
-      width: ScreenUtil().screenWidth/2,
+      width: ScreenUtil().screenWidth,
       decoration: decorOnlySolid(color: Colors.white,radius: 10.r),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Icon(Icons.account_balance_wallet_sharp),
+          SizedBox(height: 10.w),
           Text("Đổi ưu đãi")
         ],
       ),
