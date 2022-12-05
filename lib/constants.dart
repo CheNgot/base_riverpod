@@ -67,6 +67,8 @@ class Constants {
   static const String notificationPage = '/NotificationPage';
   static const String notificationDetailPage = '/notificationDetailPage';
   static const String orderHistoryPage = '/orderHistoryPage';
+  static const String accountPage = '/accountPage';
+
 
 
   static String endpointRelease = "http://allbanks.hoanvusolutions.com.vn/api/v1/";

@@ -76,11 +76,11 @@ class _OtherPageState extends State<OtherPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              _buildItem("Đánh giá đơn hàng", Assets.images.icCategory),
+              _buildItem("Đánh giá đơn hàng", Assets.images.icCategory,1),
               Divider(color: Colors.grey.shade200),
-              _buildItem("Đánh giá đơn hàng", Assets.images.icCategory),
+              _buildItem("Đánh giá đơn hàng", Assets.images.icCategory,2),
               Divider(color: Colors.grey.shade200),
-              _buildItem("Đánh giá đơn hàng", Assets.images.icCategory),
+              _buildItem("Đánh giá đơn hàng", Assets.images.icCategory,3),
               Divider(color: Colors.grey.shade200)
             ],
           ),
@@ -89,8 +89,9 @@ class _OtherPageState extends State<OtherPage> {
     );
   }
 
-  _buildItem(String s, AssetGenImage icCategory) {
-    return InkwellCustom(child: Row(
+  _buildItem(String s, AssetGenImage icCategory,int type) {
+    return InkwellCustom(
+      child: Row(
       children: [
         Container(
           height: 30.w,
@@ -105,7 +106,20 @@ class _OtherPageState extends State<OtherPage> {
 
       ],
     ),onTap: (){
-
+        switch(type){
+          case 1:
+            break;
+          case 2:
+            break;
+          case 3:
+            break;
+          case 4:
+            break;
+          case 5:
+            break;
+          case 6:
+            break;
+        }
     },);
   }
 
@@ -122,11 +136,11 @@ class _OtherPageState extends State<OtherPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              _buildItem("Đánh giá đơn hàng", Assets.images.icCategory),
+              _buildItem("Thông tin cá nhân", Assets.images.icCategory,4),
               Divider(color: Colors.grey.shade200),
-              _buildItem("Đánh giá đơn hàng", Assets.images.icCategory),
+              _buildItem("Địa chỉ đã lưu", Assets.images.icCategory,5),
               Divider(color: Colors.grey.shade200),
-              _buildItem("Đánh giá đơn hàng", Assets.images.icCategory),
+              _buildItem("Đăng xuất", Assets.images.icCategory,6),
               Divider(color: Colors.grey.shade200)
             ],
           ),
